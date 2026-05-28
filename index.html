@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBookie - Sign Up / Login</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Logo/Header -->
+        <div class="auth-header">
+            <h1>📚 eBookie</h1>
+            <p>Your Personal eBook Library</p>
+        </div>
+
+        <!-- Auth Forms Container -->
+        <div class="auth-forms">
+            <!-- Login Form -->
+            <div class="form-container active" id="loginForm">
+                <h2>Login</h2>
+                <form id="loginFormElement">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required
+                        >
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input 
+                            type="password" 
+                            id="loginPassword" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required
+                        >
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="rememberMe" 
+                            name="rememberMe"
+                        >
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <span class="error-message" id="loginGeneralError"></span>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                <div class="form-toggle">
+                    <p>Don't have an account? 
+                        <a href="#" id="toggleToSignup">Sign up here</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div class="form-container" id="signupForm">
+                <h2>Create Account</h2>
+                <form id="signupFormElement">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="signupName" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                        <span class="error-message" id="signupNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="signupEmail" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required
+                        >
+                        <span class="error-message" id="signupEmailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input 
+                            type="password" 
+                            id="signupPassword" 
+                            name="password" 
+                            placeholder="Create a strong password" 
+                            required
+                        >
+                        <span class="password-strength" id="passwordStrength"></span>
+                        <span class="error-message" id="signupPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="signupConfirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="Confirm your password" 
+                            required
+                        >
+                        <span class="error-message" id="signupConfirmPasswordError"></span>
+                    </div>
+
+                    <span class="error-message" id="signupGeneralError"></span>
+
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+
+                <div class="form-toggle">
+                    <p>Already have an account? 
+                        <a href="#" id="toggleToLogin">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="auth-footer">
+            <p>&copy; 2026 eBookie. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
